@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+.taskManagement{
+    width: 1030px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #58585823;
+    gap: 19px
+}
+.taskManagement input,.taskManagement textarea,.taskManagement select{
+    border: 1px solid rgba(128, 128, 128, 0.473);
+    outline: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+.title{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transform: translateX(-44px);
+    gap: 5px;
+}
+.description{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+}
+.priority{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+    transform: translateX(-75px);
+}
+.duedate{
+    display: flex;
+    flex-direction: row;
+    transform: translateX(-32px);
+    gap: 5px;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: white;
+}
+.listvalues{
+    width: 1030px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #58585823;
+    gap: 10px;
+}
+.taskManagement h1{
+    border-bottom: 1px solid black;
+    padding-bottom: 1px;
+}
+.operations label{
+    border-bottom: 1px solid black;
+    padding-bottom: 1px;
+}
+.listvalues input,.listvalues select{
+    border: 1px solid rgba(128, 128, 128, 0.482);
+    outline: none;
+    color: darkgray;
+    border-radius: 3px;
+}
+.listvalues table{
+    padding: 2px;
+    border: 1px solid black;
+}
+.listvalues table th{
+    padding: 20px;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.listvalues table th:last-of-type,.listvalues table td:last-of-type{
+    border-right: none;
+}
+.listvalues table td{
+    text-align: center;
+    border-right: 1px solid black;
+}
+.operations{
+    display: flex;
+    gap: 10px;
+}
+.description textarea{
+    resize: none;
+    width: 257px;
+    height: 40px;
+}
+.addcontent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 320px;
+    justify-content: center;
+    gap: 20px;
+    align-self: center;
+    border: 1px solid rgba(128, 128, 128, 0.194);
+    padding: 30px;
+    border-radius: 5px;
+    background-color: rgba(128, 128, 128, 0.194);
+}
+button{
+    padding: 10px;
+    width: 80px;
+    border-radius: 5px;
+    color: darkgreen;
+    background-color: #58585823;
+}
+.headers{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    background-color: white;
+}
+.headers h1{
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+}
+.loginPage{
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: rgba(211, 211, 211, 0.564);
+    height: 250px;
+}
+.loginPage form{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.loginPage form input{
+    border: 1px solid black;
+    border-radius: 5px;
+    outline: none;
+}
+.pagination .page-num:hover{
+    background-color: lightgray;
+}
+.pagination .active{
+    background-color: rgba(128, 128, 128, 0.404);
+    border-radius: 8px;
+    padding: 5px;
+}
