@@ -15,8 +15,8 @@ function Login1(){
           })
           if(filter.length){
             localStorage.setItem("login",true)
-            navigate("/header")
             toast.success("login successfull")
+            navigate("/header")
           }
           else{
             toast.error("login unsuccessfull")
