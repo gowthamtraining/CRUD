@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react'
 import { BrowserRouter as Router,Routes, Route,Link,useNavigate} from "react-router-dom"
 import { useState } from 'react';
-const Navbar = () => {
+const Navbar = (props) => {
   const navigate = useNavigate()
   function logout(){
-    localStorage.setItem("login",false)
+    localStorage.removeItem('login')
     navigate("/")
+    props.login(false)
   }
   return (
     <div className='navabar'>

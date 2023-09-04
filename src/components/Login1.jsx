@@ -1,26 +1,31 @@
 import React, { useEffect, useState } from 'react'
 import Navbar from './Navbar'
-import { Link, json, useNavigate } from 'react-router-dom'
+import { Link, Navigate, json, useNavigate } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify';
-function Login1(){
+function Login1(props){
     const [email,setEmail] = useState("")
     const [password,setPassword] =useState("")
     const navigate = useNavigate()
+    const data = localStorage.getItem('userData')
+    const userdata = JSON.parse(data)
     function changelogin(){
-        const data = localStorage.getItem('userData')
-        const userdata = JSON.parse(data)
         if(userdata && userdata.length){
           let filter = userdata.filter((item,index)=>{
             return item.email === email && item.password === password  
           })
+          console.log(filter)
           if(filter.length){
             localStorage.setItem("login",true)
-            toast.success("login successfull")
+            props.login(true)
             navigate("/header")
+            toast.success("login successfull")
           }
           else{
             toast.error("login unsuccessfull")
           }
+        }
+        else{
+          navigate("/")
         }
     }
   return (

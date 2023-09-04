@@ -24,14 +24,6 @@ const Data = (props) => {
 
         setTaskValue({title:"",description:"",priority:"",duedate:""})
     }
-    const navigate = useNavigate()
-    useEffect(()=>{
-        if(props.login === false){
-            navigate("/")
-        }
-        console.log(props.login)
-        
-    },[])
   return (
     <div className='header'>
         <Navbar></Navbar>
