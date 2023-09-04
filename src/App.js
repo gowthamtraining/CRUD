@@ -11,6 +11,7 @@ import Signup from './components/Signup';
 function App() {
   const [task,SetTask] = useState(getItem())
   const login = localStorage.getItem("login")
+  localStorage.setItem('login',false)
   useEffect(()=>{
     localStorage.setItem('list',JSON.stringify(task))
   },[task])
